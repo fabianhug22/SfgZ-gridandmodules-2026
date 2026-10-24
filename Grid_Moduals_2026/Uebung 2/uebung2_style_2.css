@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Uncial+Antiqua&family=Unica+One&display=swap');
+
+body{
+
+    background-color: rgb(18, 35, 29);
+    background-position-x: center;
+}
+
+body {
+
+    cursor: url(Assets/glass.png) 30 30, auto;
+}
+
+p{
+    font-family: "Unica One", sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 2rem;
+}
+
+h1{
+    font-family: "Unica One", sans-serif;
+    font-size: 9rem;
+    margin: 2rem;
+}
+
+h2{
+    font-family: "Unica One", sans-serif;
+}
+
+.titel {
+    color: rgb(242, 232, 210);
+    text-align: center; 
+    margin: 4rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+li{
+    margin-top: 3rem;
+    margin-left: 4rem;
+    text-align: left;
+    list-style-type: none;
+    font-size: 4rem;
+
+    padding: 0.5rem;
+    transition: padding-left 0.35s ease-in-out, color 0.35s ease-in-out;
+
+}
+
+li:hover{
+    padding-left: 1.5rem;
+    color: rgb(218, 180, 99);
+    text-decoration-line:underline;
+    text-transform:lowercase;
+    
+    
+}
+
+
+ul{
+    color:rgb(168, 190, 169);
+    margin-top: 1.5rem;
+    margin-right: 4rem;
+    text-align:right;
+    font-size: 2rem;
+    transition: padding-right 0.4s ease-in-out, color 0.35s ease-in-out;
+
+}
+
+ul:hover{
+    padding-right: 3rem ;
+    color:rgb(232, 204, 145);
+    text-transform:lowercase;
+
+}
+
+a:hover {
+    padding-left: 0.25rem;
+    color: rgb(218, 180, 99);
+
+}
+
+a {
+    color: rgb(242, 232, 210);
+    text-transform: none;
+    padding-left: 0;
+    transition: padding-left 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.footer {
+    color: rgb(168, 190, 169);
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+
+    padding-top: 150px;
+    padding-left: 40px;
+    padding-bottom: 100px;
+}
