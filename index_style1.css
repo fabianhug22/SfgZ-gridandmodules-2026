@@ -1,21 +1,11 @@
 :root {
-    --bg: #f4f5f9;
-    --card: #ffffff;
-    --text: #1f2430;
-    --muted: #8a90a2;
-    --accent: #5b5bf0;
-    --accent-2: #9b5cf6;
-    --border: #e4e6ee;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #14151c;
-        --card: #1e2029;
-        --text: #eceef5;
-        --muted: #7b8196;
-        --border: #2b2e3b;
-    }
+    --background: #14151c;
+    --text: #eceef5;
+    --zeile: #7b8196;
+    --akzent: #1f2430;
+    --box-hell: #1e2029;
+    --weiss: #ffffff;
+    --abstand: 2rem;
 }
 
 * {
@@ -23,75 +13,84 @@
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
+    margin: 2rem;
     padding: 4rem 1rem;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
-    background: var(--bg);
+    gap: var(--abstand);
+    background-color: var(--background);
     color: var(--text);
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     counter-reset: uebung;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 1.5rem;
 }
 
 a {
     counter-increment: uebung;
-    position: relative;
     display: flex;
     align-items: center;
     gap: 1rem;
     width: 100%;
-    max-width: 28rem;
-    padding: 1rem 1.25rem;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    color: var(--text);
-    font-size: 1.05rem;
+    max-width: 36rem;
+
+    font-size: 1.4rem;
     font-weight: 600;
+    color: var(--text);
     text-decoration: none;
-    box-shadow: 0 1px 2px rgba(20, 21, 40, 0.06);
-    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+
+    padding: 1rem 1.25rem;
+    background-color: var(--box-hell);
+    border: 2px solid var(--weiss);
+    border-radius: 1rem;
+
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* Nummern-Badge */
 a::before {
     content: counter(uebung);
     flex: none;
     display: grid;
     place-items: center;
-    width: 2.25rem;
-    height: 2.25rem;
-    border-radius: 10px;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    color: #fff;
-    font-size: 0.95rem;
+    width: 2.75rem;
+    height: 2.75rem;
+
+    font-size: 1.15rem;
+    color: var(--weiss);
+    background-color: var(--akzent);
+    border: 2px solid var(--weiss);
+    border-radius: 0.75rem;
 }
 
-/* Pfeil rechts */
 a::after {
-    content: "→";
     margin-left: auto;
-    color: var(--muted);
-    transition: transform 0.18s ease, color 0.18s ease;
+    color: var(--zeile);
+    transition: transform 0.1s ease-in-out, color 0.2s ease-in-out;
 }
 
 a:hover,
 a:focus-visible {
-    transform: translateY(-2px);
-    border-color: var(--accent);
-    box-shadow: 0 8px 20px rgba(91, 91, 240, 0.18);
+    transform: translateX(8px);
 }
 
 a:hover::after,
 a:focus-visible::after {
-    color: var(--accent);
+    color: var(--text);
     transform: translateX(4px);
 }
 
-a:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
+@media (max-width: 700px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    a {
+        font-size: 1.15rem;
+    }
 }
