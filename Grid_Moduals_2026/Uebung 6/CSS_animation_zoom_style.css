@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+body {
+    font-family: "Cinzel", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 4rem;
+    background-color: black;
+    overflow-x: hidden;
+    color: white;
+}
+
+.zeile1{
+    animation-name: zoomen;
+    animation-duration: 6s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+    font-size: 10rem;
+    font-weight: 100;
+}
+
+.zeile2{
+    animation-name: zoomen;
+    animation-duration: 6s;
+    animation-delay: 4s;
+    animation-fill-mode: both;
+    font-size: 10rem;
+    font-weight: 100;
+}
+
+.zeile3{
+    animation-name: zoomen;
+    animation-duration: 6s;
+    animation-delay: 7.5s;
+    animation-fill-mode: both;
+    font-size: 10rem;
+    font-weight: 100;
+}
+
+.zeile4{
+    animation-name: einblenden;
+    animation-duration: 3s;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+    font-size: 2rem;
+    font-weight: 100;
+    margin-top: 3rem;
+}
+
+@keyframes zoomen{
+    0%{
+        transform: scale(0.05);
+        opacity: 0;
+        color: white;
+    }
+    30%{
+        transform: scale(0.7);
+        opacity: 1;
+        color: white;
+    }
+    50%{
+        transform: scale(1);
+        opacity: 1;
+        color: red;
+    }
+    70%{
+        transform: scale(1);
+        opacity: 1;
+        color: red;
+    }
+    100%{
+        transform: scale(0.05);
+        opacity: 0;
+        color: white;
+    }
+}
+
+@keyframes einblenden{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
