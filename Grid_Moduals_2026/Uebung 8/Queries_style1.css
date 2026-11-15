@@ -1,0 +1,45 @@
+/* Ohne Media Query: gilt immer (Mobile First) */
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #efe6d2;
+  }
+  
+  .sport {
+    display: grid;
+    grid-template-columns: 0.1fr 0.5fr 0.5fr 0.5fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 3rem;
+    line-height: 3;
+    
+  }
+  
+  .feld {
+
+    margin: 0;
+    padding: 1rem;
+    background: white;
+    font-size: 1.5rem;
+  }
+  
+  /* Ab 48em Breite: drei Dinge wechseln */
+@media (min-width: 48em) {
+  body {
+    background: #f3f3f3;
+  }
+
+  .flut {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    grid-row: 1 / 1;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+  }

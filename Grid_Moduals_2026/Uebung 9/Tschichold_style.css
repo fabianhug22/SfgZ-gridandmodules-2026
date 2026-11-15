@@ -1,0 +1,102 @@
+:root {
+    --papier: #aeaeae;
+    --rot: #d7342b;
+    --schwarz: #1f1f1f;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background: var(--papier);
+    color: var(--schwarz);
+    font-family: "Jost", sans-serif;
+  }
+  
+  /* Abstände der Browser zurücksetzen */
+  .plakat h1,
+  .plakat h2,
+  .plakat p,
+  .plakat ul {
+    margin: 0;
+    line-height: 1;
+  }
+  
+  .plakat {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: repeat(16, minmax(0, 1fr));
+  }
+
+  .balken-waagrecht {
+    grid-column: 1 / 10;
+    grid-row: 3;
+    align-self: end;
+    height: 1.6vw;
+    background: var(--rot);
+  }
+
+  .balken-senkrecht {
+    grid-column: 9;
+    grid-row: 17 / 6;
+    width: 1.6vw;
+    justify-self: right;
+    background: var(--rot);
+  }
+
+  .balken-schwarz-senkrecht {
+    grid-column: 3;
+    grid-row: 12 / 10;
+    width: 1.6vw;
+    justify-self: right;
+    background: var(--schwarz);
+
+  }
+  
+  .mitteilungen {
+    grid-column: 3 / 10;
+    grid-row: 4;
+    font-size: 7.5vw;
+    line-height: 1;
+    transform: rotate(-180deg)
+  }
+  
+  .typographische {
+    grid-column: 4 / 11;
+    grid-row: 3;
+    font-size: 7.5vw;
+    font-weight: 0;
+    line-height: 1;
+  }
+
+  .thema {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    grid-column: 5 / 9;
+    grid-row: 6;
+    
+  }
+  
+  .sonderheft {
+    font-size: 4.2vw;
+    font-weight: 300;
+    align-self: end;
+    grid-column: 5 / 8;
+    grid-row: 9 / 12;
+  }
+  
+  .elementare {
+    font-size: 4.2vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .elementare span {
+    display: block;
+    align-self: flex-end;
+  }
